@@ -1,0 +1,24 @@
+  <h2>Task Report</h2>
+<table border="1" cellpadding="5">
+  <tr>
+    <th>Task</th>
+    <th>Department</th>
+    <th>Status</th>
+    <th>Assigned User</th>
+  </tr> 
+  {% for task in tasks %}
+  <tr>
+    <td>{{ task.title }}</td>
+    <td>{{ task.department.name }}</td>
+    <td>{{ task.display_status }}</td>
+    <td>
+      {% if task.assigned_to %}
+        {{ task.assigned_to.username }}_{{ task.assigned_to.profile.department.name }}
+      {% else %}
+        -
+      {% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+</table> 
+

@@ -1,0 +1,2 @@
+p="hi hello how are you new 23"
+print(p)

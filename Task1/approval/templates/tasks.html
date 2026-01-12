@@ -1,0 +1,6 @@
+<h2>All Tasks</h2>
+<ul>
+  {% for task in tasks %}
+    <li>{{ task.title }} | {{ task.department.name }} | {{ task.display_status }} | {{ task.assigned_to }}</li>
+  {% endfor %}
+</ul>
